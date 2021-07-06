@@ -35,10 +35,4 @@ public class QuestionA {
         else
             return true;
     }
-
-    public static void main(String[] args) {
-        String str = "avvcaa";
-                //"Rats live on no evil star";
-        System.out.println(palindromePermutation(str));
-    }
 }

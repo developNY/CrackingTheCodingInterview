@@ -26,9 +26,4 @@ public class QuestionB {
         else
             return true;
     }
-
-    public static void main(String[] args) {
-        String str = "Rats live on no evil star";
-        System.out.println(palindromePermutation(str));
-    }
 }
