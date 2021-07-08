@@ -15,7 +15,7 @@ public class QuestionB {
                 diff = true;
                 if (s1.length() == s2.length()) idx1++;
             } else {
-                index1++;
+                idx1++;
             }
             idx2++;
         }
