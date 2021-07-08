@@ -3,6 +3,7 @@ package Ch01_Arrays_and_Strings.Q1_05_One_Away;
 import java.util.Arrays;
 
 public class QuestionA {
+    //O(n)
     public static boolean checkOneWay(String a, String b, int len){
         char[] a_arr = a.toCharArray(); //short
         char[] b_arr = b.toCharArray(); //long
@@ -23,7 +24,7 @@ public class QuestionA {
     }
 
     public static boolean oneEditAway(String a, String b){
-        if(Math.abs(a.length()-b.length()) > 2)
+        if(Math.abs(a.length()-b.length()) > 1)
             return false;
         if(a.length() == b.length())
             return checkOneWay(a, b, a.length()-1);
