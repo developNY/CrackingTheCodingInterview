@@ -3,7 +3,7 @@ package Ch01_Arrays_and_Strings.Q1_05_One_Away;
 import java.util.Arrays;
 
 public class QuestionA {
-    //O(n)
+    //O(nlogn) Using sort
     public static boolean checkOneWay(String a, String b){
         char[] short_arr = a.length() <= b.length() ? a.toCharArray() : b.toCharArray();
         char[] long_arr = a.length() <= b.length() ? b.toCharArray() : a.toCharArray();
