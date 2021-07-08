@@ -4,17 +4,18 @@ import java.util.Arrays;
 
 public class QuestionA {
     //O(n)
-    public static boolean checkOneWay(String a, String b, int len){
-        char[] a_arr = a.toCharArray(); //short
-        char[] b_arr = b.toCharArray(); //long
-        Arrays.sort(a_arr);
-        Arrays.sort(b_arr);
-        int b_cnt = 0;
+    public static boolean checkOneWay(String a, String b){
+        char[] short_arr = a.length() <= b.length() ? a.toCharArray() : b.toCharArray();
+        char[] long_arr = a.length() <= b.length() ? b.toCharArray() : a.toCharArray();
+        Arrays.sort(short_arr);
+        Arrays.sort(long_arr);
         int diff = 0;
+        int b_cnt = 0;
+        int len = short_arr.length == long_arr.length ? short_arr.length -1 : short_arr.length;
         for (int i = 0; i < len; i++) {
-            if(a_arr[i] != b_arr[b_cnt]){
+            if(short_arr[i] != long_arr[b_cnt]){
                 diff++;
-                if(diff > 1 || a_arr[i] != b_arr[b_cnt+1])
+                if(diff > 1 || short_arr[i] != long_arr[b_cnt+1])
                     return false;
                 b_cnt++;
             }
@@ -23,21 +24,10 @@ public class QuestionA {
         return true;
     }
 
-    public static boolean oneEditAway(String a, String b){
-        if(Math.abs(a.length()-b.length()) > 1)
-            return false;
-        if(a.length() == b.length())
-            return checkOneWay(a, b, a.length()-1);
-        else if (a.length() > b.length())
-            return checkOneWay(b, a, b.length());
-        else
-            return checkOneWay(a, b, a.length());
-    }
-
     public static void main(String[] args) {
-        String[][] pairs = {{"pale", "ple"},{"pales", "pale"},{"pale", "bale"},{"pale", "bakse"}};
+        String[][] pairs = {{"pale", "ple"},{"pales", "pale"},{"pale", "bale"},{"pale", "balse"}};
         for (String[] pair : pairs) {
-            System.out.println(oneEditAway(pair[0], pair[1]));
+            System.out.println(checkOneWay(pair[0], pair[1]));
         }
     }
 }
