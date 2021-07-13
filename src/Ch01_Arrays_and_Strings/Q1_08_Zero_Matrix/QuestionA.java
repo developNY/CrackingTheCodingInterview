@@ -17,7 +17,7 @@ public class QuestionA {
 
         for (int i = 0; i < row.length; i++) {
             for (int j = 0; j < col.length; j++) {
-                if(col[i] == true || col[i] == true)
+                if(row[i] == true || col[j] == true)
                     System.out.print("0");
                 else
                     System.out.print(matrix[i][j]);
@@ -27,7 +27,7 @@ public class QuestionA {
 
     }
     public static void main(String[] args) {
-        int[][] matrix = {{0,1,0,1,1},{1,1,1,1,1},{1,0,0,1,1},{1,1,1,1,1},{0,1,1,0,0}};
+        int[][] matrix = {{0,1,1,1,1},{1,1,1,1,1},{1,0,0,1,1},{1,1,1,1,1},{0,1,1,1,1}};
         setZero(matrix);
     }
 }
