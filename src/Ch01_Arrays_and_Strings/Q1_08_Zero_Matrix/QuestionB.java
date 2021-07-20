@@ -5,9 +5,9 @@ public class QuestionB {
         boolean rowHasZero = false;
         boolean colHasZero = false;
 
-        //row 
+        //row
         for (int i = 0; i < matrix.length; i++) {
-            if()
+            //if()
 
         }
     }
