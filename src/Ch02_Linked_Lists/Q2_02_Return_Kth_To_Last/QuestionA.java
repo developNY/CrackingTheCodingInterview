@@ -8,8 +8,11 @@ public class QuestionA {
         if(head == null){
             return 0;
         }
-        int index =
-        return 0;
+        int index = printKthToLast(head.next, k) + 1;
+        if(index == k){
+            System.out.println(k + "th to last node is" + head.data);
+        }
+        return index;
     }
 
     public static void main(String[] args) {

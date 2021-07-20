@@ -96,6 +96,6 @@ public class TreeNode {
     }
 
     public void print() {
-        //BTreePrinter.printNode(this);
+        BTreePrinter.printNode(this);
     }
 }
