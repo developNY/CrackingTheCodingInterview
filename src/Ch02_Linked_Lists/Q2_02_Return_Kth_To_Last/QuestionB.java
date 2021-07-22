@@ -19,7 +19,10 @@ public class QuestionB {
             return null;
         }
         LinkedListNode node = kthToLast(head.next, k, idx);
-        idx.value
+        idx.value++;
+        if(idx.value == k)
+            return head;
+        return node;
     }
 
     public static void main(String[] args) {
