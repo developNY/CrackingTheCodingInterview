@@ -14,7 +14,7 @@ public class QuestionA {
             LinkedListNode next = head.next;
             head.next = null;
 
-            if(head.data > rnd){
+            if(head.data >= rnd){   //if data==rnd, then it must go to the afterEnd
                 if(afterStart == null){
                     afterStart = head;
                     afterEnd = head;
